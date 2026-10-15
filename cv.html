@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Prestyan Dwi Febrianto — Administrative Specialist &amp; Web Developer</title>
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* ==================== GLOBAL STYLES ==================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #0b0f19;
+      color: #1e293b;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.45;
+      padding: 30px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Top Action Bar (Screen Only) */
+    .top-controls {
+      max-width: 210mm;
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: #1e293b;
+      padding: 12px 20px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .top-controls .info-tag {
+      color: #94a3b8;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .top-controls .info-tag i { color: #38bdf8; }
+    .btn-action-group {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-ctrl {
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: all 0.2s ease;
+    }
+    .btn-print {
+      background: linear-gradient(135deg, #0284c7, #0284c7 40%, #059669 100%);
+      color: #fff;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.4);
+    }
+    .btn-print:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 20px rgba(2, 132, 199, 0.6);
+    }
+    .btn-edit {
+      background: rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+    .btn-edit:hover {
+      background: rgba(255, 255, 255, 0.18);
+    }
+
+    /* ==================== RESUME A4 SHEET ==================== */
+    .a4-sheet {
+      width: 210mm;
+      min-height: 297mm;
+      background: #ffffff;
+      padding: 14mm 16mm 14mm 16mm;
+      border-radius: 4px;
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.6);
+      position: relative;
+    }
+
+    /* Editable active notice */
+    .a4-sheet[contenteditable="true"] {
+      outline: 2px dashed #0284c7;
+    }
+
+    /* Header Section */
+    .cv-header {
+      border-bottom: 2px solid #0f172a;
+      padding-bottom: 10px;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+    .cv-name {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.85rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: #0f172a;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .cv-headline {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #0284c7;
+      margin-bottom: 6px;
+      letter-spacing: 0.2px;
+    }
+    .cv-contact {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.8rem;
+      color: #475569;
+      font-weight: 500;
+    }
+    .cv-contact a {
+      color: #0284c7;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .cv-contact a:hover {
+      text-decoration: underline;
+    }
+    .cv-contact .sep {
+      color: #cbd5e1;
+    }
+
+    /* Section Headers */
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #0f172a;
+      padding-bottom: 3px;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* Section Content Typography */
+    .summary-text {
+      font-size: 0.82rem;
+      color: #334155;
+      line-height: 1.5;
+      text-align: justify;
+    }
+
+    /* Experience & Projects Entries */
+    .item-block {
+      margin-bottom: 9px;
+    }
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+    .item-title {
+      font-size: 0.87rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .item-company {
+      font-weight: 600;
+      color: #0284c7;
+    }
+    .item-date {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #64748b;
+      white-space: nowrap;
+    }
+    .item-bullets {
+      list-style-type: disc;
+      padding-left: 17px;
+      font-size: 0.805rem;
+      color: #334155;
+      line-height: 1.42;
+    }
+    .item-bullets li {
+      margin-bottom: 2.5px;
+    }
+    .item-bullets strong {
+      color: #0f172a;
+      font-weight: 600;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      font-size: 0.805rem;
+      color: #334155;
+      line-height: 1.45;
+    }
+    .skill-line strong {
+      color: #0f172a;
+      font-weight: 700;
+      min-width: 170px;
+      display: inline-block;
+    }
+
+    /* Education Entry */
+    .edu-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 0.83rem;
+    }
+    .edu-inst {
+      font-weight: 700;
+      color: #0f172a;
+    }
+    .edu-degree {
+      color: #475569;
+      font-weight: 500;
+    }
+    .edu-date {
+      font-size: 0.78rem;
+      color: #64748b;
+      font-weight: 600;
+    }
+
+    /* ==================== PRINT MEDIA STYLES (ATS PDF) ==================== */
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 10mm 14mm 10mm 14mm;
+      }
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+      .top-controls {
+        display: none !important;
+      }
+      .a4-sheet {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 0 !important;
+        box-shadow: none !important;
+        border-radius: 0 !important;
+      }
+      .a4-sheet[contenteditable="true"] {
+        outline: none !important;
+      }
+      a {
+        text-decoration: none !important;
+        color: #0f172a !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Screen Top Controls -->
+  <div class="top-controls">
+    <div class="info-tag">
+      <i class="fas fa-check-circle"></i>
+      <span><strong>Format ATS-Friendly 1 Halaman</strong> &bull; Siap cetak PDF via browser</span>
+    </div>
+    <div class="btn-action-group">
+      <button class="btn-ctrl btn-edit" id="btnToggleEdit" onclick="toggleEditMode()">
+        <i class="fas fa-pen"></i> Edit Teks Langsung
+      </button>
+      <button class="btn-ctrl btn-print" onclick="window.print()">
+        <i class="fas fa-print"></i> Cetak / Simpan ke PDF
+      </button>
+    </div>
+  </div>
+
+  <!-- A4 Printable Sheet -->
+  <div class="a4-sheet" id="cvContent">
+
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">PRESTYAN DWI FEBRIANTO</h1>
+      <div class="cv-headline">Administrative &amp; Operations Specialist | Operator Dapodik &amp; Web System Developer</div>
+      <div class="cv-contact">
+        <span><i class="fas fa-map-marker-alt"></i> D.I. Yogyakarta, Indonesia</span>
+        <span class="sep">&bull;</span>
+        <span><i class="fas fa-envelope"></i> <a href="mailto:prestyan.febrianto@gmail.com">prestyan.febrianto@gmail.com</a></span>
+        <span class="sep">&bull;</span>
+        <span><i class="fab fa-whatsapp"></i> +62 812-xxxx-xxxx</span>
+        <span class="sep">&bull;</span>
+        <span><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/prestyan-dwi-febrianto-6a5bb2406" target="_blank">linkedin.com/in/prestyandwi</a></span>
+        <span class="sep">&bull;</span>
+        <span><i class="fas fa-globe"></i> <a href="https://prestianhanif.github.io/mips-academic-suite/portfolio.html" target="_blank">prestianhanif.github.io/mips-academic-suite</a></span>
+      </div>
+    </header>
+
+    <!-- Ringkasan Profesional -->
+    <section>
+      <h2 class="section-title">Ringkasan Profesional</h2>
+      <p class="summary-text">
+        Profesional Administrasi dan Manajemen Operasional dengan rekam jejak terbukti di sektor pendidikan dan industri komersial (manufaktur, penjualan, &amp; distribusi). Ahli dalam tata kelola kearsipan resmi, sinkronisasi Data Pokok Pendidikan (Dapodik Kemendikbudristek), pengoperasian sistem keuangan, serta administrasi penjualan dan logistik. Memiliki keunggulan strategis dalam merancang dan mengembangkan aplikasi web kustom mandiri (PHP CodeIgniter, MySQL, Modern JavaScript) untuk mentransformasi alur kerja manual menjadi sistem digital yang efisien, terotomasi, dan paperless.
+      </p>
+    </section>
+
+    <!-- Pengalaman Kerja -->
+    <section>
+      <h2 class="section-title">Pengalaman Kerja</h2>
+
+      <!-- Job 1 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Administrative Specialist &amp; Operator Dapodik</span> &bull; 
+            <span class="item-company">Madina Islamic Premier School (MIPS)</span>
+          </div>
+          <div class="item-date">2023 &ndash; Sekarang | Yogyakarta</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Bertanggung jawab penuh atas pengelolaan <strong>Data Pokok Pendidikan (Dapodik Kemendikbudristek)</strong>: memimpin sinkronisasi berkala data 360+ peserta didik, validasi NISN, pemutakhiran data PTK guru, dan verifikasi pelaporan dana BOSP tanpa residu.</li>
+          <li>Mengelola administrasi operasional harian sekolah, kearsipan resmi, dan pengoperasian aplikasi keuangan institusi dengan rekonsiliasi data pembayaran yang akurat.</li>
+          <li>Merancang dan membangun 3 aplikasi web internal: <strong>SIM Tendik</strong>, <strong>SIM Santri (Buku Induk Digital)</strong>, dan <strong>Portal PMB Online</strong> berbasis PHP CodeIgniter &amp; MySQL, memangkas proses administrasi kertas menjadi 100% digital.</li>
+          <li>Mengembangkan formulir pendaftaran cerdas berbasis <em>conditional logic</em> (Santri Baru vs Pindahan) serta otomasi penomoran NIS resmi kesiswaan.</li>
+        </ul>
+      </div>
+
+      <!-- Job 2 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Sales Administration, Production &amp; Distribution Coordinator</span> &bull; 
+            <span class="item-company">CV Sedayu Agro Industries</span>
+          </div>
+          <div class="item-date">Yogyakarta</div>
+        </div>
+        <ul class="item-bullets">
+          <li>Mengelola administrasi penjualan harian, pemrosesan pesanan pelanggan, invoice, serta operasional toko online/marketplace.</li>
+          <li>Mencatat alur masuk-keluar bahan baku dan menyusun laporan kapasitas produksi harian secara terstruktur.</li>
+          <li>Mengoordinasikan jadwal pengiriman barang, pembuatan surat jalan resmi, dan monitoring distribusi logistik ke mitra ekspedisi tepat waktu.</li>
+          <li>Menyusun rekapitulasi data transaksi penjualan, pengarsipan faktur penagihan, serta rekonsiliasi kas secara berkala.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Portofolio Sistem Web yang Dibangun -->
+    <section>
+      <h2 class="section-title">Portofolio Sistem Aplikasi Web</h2>
+
+      <!-- Project 1 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">MIPS Academic Management ERP Suite</span> &bull; 
+            <span style="font-size:0.78rem; font-weight:600; color:#475569;">PHP CodeIgniter 3, MySQL, DataTables, Bootstrap</span>
+          </div>
+          <div class="item-date"><a href="https://prestianhanif.github.io/mips-academic-suite/portfolio.html" target="_blank" style="color:#0284c7; text-decoration:none;">Demo Live &rarr;</a></div>
+        </div>
+        <ul class="item-bullets">
+          <li>Sistem ERP sekolah terintegrasi 3 modul: SIM Tendik (struktur hierarki SDM &amp; filter onsite/stay), SIM Santri Buku Induk Digital (pencarian 360+ santri, histori mutasi, cetak PDF), dan Portal PMB Online (jalur pendaftaran cerdas &amp; kalkulasi infaq).</li>
+        </ul>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="item-block">
+        <div class="item-header">
+          <div>
+            <span class="item-title">KOWPI Digital Publication &amp; Event Suite</span> &bull; 
+            <span style="font-size:0.78rem; font-weight:600; color:#475569;">HTML5, Modern CSS Grid, JavaScript ES6+, Lucide</span>
+          </div>
+          <div class="item-date"><a href="https://prestianhanif.github.io/mips-academic-suite/webinar/" target="_blank" style="color:#0284c7; text-decoration:none;">Demo Live &rarr;</a></div>
+        </div>
+        <ul class="item-bullets">
+          <li>Platform direktori webinar berseri dengan sistem filtering kategori instan berbasis JavaScript murni (client-side) dan Katalog Perpustakaan Ebook Digital dengan integrasi pencarian cepat dan gateway unduhan.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Keahlian Utama -->
+    <section>
+      <h2 class="section-title">Keahlian Utama (Core Skills)</h2>
+      <div class="skills-grid">
+        <div class="skill-line">
+          <strong>Administrasi &amp; Operasional:</strong>
+          <span>Operator Dapodik Kemendikbudristek, Verval PD, Manajemen Kearsipan Digital, Administrasi Sekolah, Admin Marketplace &amp; Penjualan, Koordinasi Logistik &amp; Distribusi.</span>
+        </div>
+        <div class="skill-line">
+          <strong>Keuangan &amp; Database:</strong>
+          <span>Aplikasi Keuangan Institusi, Pembukuan &amp; Rekonsiliasi Transaksi, Microsoft Excel (Advanced Lookup &amp; Pivot), MySQL Database, Relational Data Schema.</span>
+        </div>
+        <div class="skill-line">
+          <strong>Pengembangan Sistem Web:</strong>
+          <span>Fullstack Web Development, PHP (CodeIgniter MVC Architecture), JavaScript (ES6+), HTML5/CSS3, Bootstrap, RESTful APIs, Git &amp; GitHub, Otomasi Proses Bisnis.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pendidikan -->
+    <section>
+      <h2 class="section-title">Pendidikan &amp; Pelatihan</h2>
+      <div class="edu-line">
+        <div>
+          <span class="edu-inst">Universitas / Perguruan Tinggi</span> &bull; 
+          <span class="edu-degree">Sarjana (S1) / Diploma</span>
+        </div>
+        <div class="edu-date">Yogyakarta, Indonesia</div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    let isEditing = false;
+    function toggleEditMode() {
+      const sheet = document.getElementById('cvContent');
+      const btn = document.getElementById('btnToggleEdit');
+      isEditing = !isEditing;
+      sheet.contentEditable = isEditing;
+      if (isEditing) {
+        btn.innerHTML = '<i class="fas fa-check"></i> Selesai Edit (Simpan)';
+        btn.style.background = '#10b981';
+        btn.style.color = '#fff';
+        alert('Mode Edit Aktif!\nAnda sekarang bisa mengklik teks apa saja (No. Telepon, Email, Nama Kampus, dll) dan mengetik langsung pada halaman ini.');
+      } else {
+        btn.innerHTML = '<i class="fas fa-pen"></i> Edit Teks Langsung';
+        btn.style.background = 'rgba(255, 255, 255, 0.1)';
+        btn.style.color = '#e2e8f0';
+      }
+    }
+  </script>
+
+</body>
+</html>
