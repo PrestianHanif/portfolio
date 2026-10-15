@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1584, height=396, initial-scale=1.0">
+  <title>LinkedIn Banner Render</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Outfit:wght@600;800;900&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1584px;
+      height: 396px;
+      overflow: hidden;
+      background: #090e1a;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    #bannerStage {
+      width: 1584px;
+      height: 396px;
+      position: relative;
+      overflow: hidden;
+    }
+    .banner-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url('assets/img/banner_bg.jpg');
+      background-size: cover;
+      background-position: center right;
+      opacity: 0.88;
+    }
+    .banner-gradient-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(90deg, 
+        rgba(9, 14, 26, 0.96) 0%, 
+        rgba(9, 14, 26, 0.84) 35%, 
+        rgba(9, 14, 26, 0.45) 70%, 
+        rgba(9, 14, 26, 0.18) 100%);
+    }
+    .banner-content {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      padding: 44px 60px 42px 300px; /* Safe zone for LinkedIn circular avatar */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 5;
+    }
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      align-self: flex-start;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.2);
+    }
+    .top-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+    .name-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.35rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+    .name-title .highlight {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .tagline i { color: #38bdf8; font-size: 0.95rem; }
+    .pills-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .pills-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cap-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      backdrop-filter: blur(8px);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .cap-pill.pill-cyan i { color: #38bdf8; }
+    .cap-pill.pill-emerald i { color: #34d399; }
+    .cap-pill.pill-amber i { color: #fbbf24; }
+    .cap-pill.pill-purple i { color: #c084fc; }
+    .url-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(16, 185, 129, 0.2));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #f0fdf4;
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.3px;
+    }
+    .url-badge i { color: #34d399; }
+  </style>
+</head>
+<body>
+  <div id="bannerStage">
+    <div class="banner-bg"></div>
+    <div class="banner-gradient-overlay"></div>
+    <div class="banner-content">
+      <div>
+        <div class="top-badge">
+          <span class="dot"></span>
+          Administrative &amp; Operations Specialist
+        </div>
+        <div class="name-title">
+          PRESTYAN <span class="highlight">DWI FEBRIANTO</span>
+        </div>
+        <div class="tagline">
+          <i class="fas fa-chevron-right"></i>
+          <span>Bridging School &amp; Business Operations with In-House Web System Solutions</span>
+        </div>
+      </div>
+      <div class="pills-row">
+        <div class="pills-group">
+          <div class="cap-pill pill-cyan">
+            <i class="fas fa-university"></i>
+            <span>Operator Dapodik</span>
+          </div>
+          <div class="cap-pill pill-emerald">
+            <i class="fas fa-folder-open"></i>
+            <span>Records &amp; Archiving</span>
+          </div>
+          <div class="cap-pill pill-amber">
+            <i class="fas fa-calculator"></i>
+            <span>Financial Systems</span>
+          </div>
+          <div class="cap-pill pill-purple">
+            <i class="fas fa-code"></i>
+            <span>Web System Builder</span>
+          </div>
+        </div>
+        <div class="url-badge">
+          <i class="fas fa-globe"></i>
+          <span>prestianhanif.github.io/mips-academic-suite</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

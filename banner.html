@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Banner Generator (1584 x 396) | Prestyan Dwi Febrianto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800;900&family=Outfit:wght@600;800;900&family=JetBrains+Mono:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #060911;
+      color: #f8fafc;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .header-box {
+      text-align: center;
+      margin-bottom: 24px;
+      max-width: 800px;
+    }
+    .header-box h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .header-box p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+    }
+    
+    /* Banner Preview Container (Scaled for viewing) */
+    .preview-card {
+      background: #0f172a;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      max-width: 100%;
+      overflow: hidden;
+      margin-bottom: 24px;
+    }
+
+    /* THE REAL BANNER WRAPPER (Exact 1584 x 396 px) */
+    #bannerStage {
+      width: 1584px;
+      height: 396px;
+      position: relative;
+      overflow: hidden;
+      background: #090e1a;
+      transform-origin: top center;
+    }
+
+    /* Background Image with Dark Overlay */
+    .banner-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-image: url('assets/img/banner_bg.jpg');
+      background-size: cover;
+      background-position: center right;
+      opacity: 0.85;
+    }
+    .banner-gradient-overlay {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: linear-gradient(90deg, 
+        rgba(9, 14, 26, 0.95) 0%, 
+        rgba(9, 14, 26, 0.82) 35%, 
+        rgba(9, 14, 26, 0.45) 70%, 
+        rgba(9, 14, 26, 0.2) 100%);
+    }
+
+    /* Avatar Safe Zone Outline (For visual alignment) */
+    .avatar-indicator {
+      position: absolute;
+      left: 55px;
+      bottom: -60px;
+      width: 190px;
+      height: 190px;
+      border-radius: 50%;
+      border: 3px dashed rgba(56, 189, 248, 0.4);
+      background: rgba(14, 165, 233, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 25px;
+      color: rgba(56, 189, 248, 0.7);
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-align: center;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .avatar-indicator i { font-size: 1.5rem; margin-bottom: 4px; }
+
+    /* Banner Content Layer */
+    .banner-content {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      padding: 44px 60px 40px 290px; /* Left padding clears the avatar */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 5;
+    }
+
+    /* Top Row: Mini Tag */
+    .top-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 18px;
+      border-radius: 50px;
+      background: rgba(14, 165, 233, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      align-self: flex-start;
+      box-shadow: 0 4px 15px rgba(2, 132, 199, 0.2);
+    }
+    .top-badge .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #10b981;
+      box-shadow: 0 0 10px #10b981;
+    }
+
+    /* Middle Area: Name & Subtitle */
+    .name-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 3.3rem;
+      font-weight: 900;
+      line-height: 1.05;
+      letter-spacing: -0.5px;
+      color: #ffffff;
+      margin-top: 10px;
+      margin-bottom: 6px;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.6);
+    }
+    .name-title .highlight {
+      background: linear-gradient(135deg, #38bdf8 0%, #818cf8 50%, #34d399 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .tagline {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: #cbd5e1;
+      letter-spacing: 0.2px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .tagline i { color: #38bdf8; font-size: 0.95rem; }
+
+    /* Bottom Row: 4 Capability Pills + Portfolio URL */
+    .pills-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: auto;
+    }
+    .pills-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .cap-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 8px;
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #e2e8f0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+    .cap-pill.pill-cyan i { color: #38bdf8; }
+    .cap-pill.pill-emerald i { color: #34d399; }
+    .cap-pill.pill-amber i { color: #fbbf24; }
+    .cap-pill.pill-purple i { color: #c084fc; }
+
+    .url-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 18px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.2), rgba(16, 185, 129, 0.15));
+      border: 1px solid rgba(56, 189, 248, 0.4);
+      color: #f0fdf4;
+      font-size: 0.88rem;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      letter-spacing: -0.3px;
+    }
+    .url-badge i { color: #34d399; }
+
+    /* Controls Bar */
+    .actions-bar {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-download {
+      background: linear-gradient(135deg, #0284c7, #0284c7 40%, #059669 100%);
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.05rem;
+      padding: 14px 32px;
+      border-radius: 50px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(2, 132, 199, 0.4);
+      transition: all 0.25s ease;
+    }
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 40px rgba(2, 132, 199, 0.6);
+    }
+    .btn-toggle {
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 14px 22px;
+      border-radius: 50px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-toggle:hover {
+      background: rgba(255, 255, 255, 0.14);
+      color: #fff;
+    }
+
+    /* Scaling helper for preview on standard desktop screens */
+    @media (max-width: 1650px) {
+      .stage-scaler {
+        width: 1188px;
+        height: 297px;
+        overflow: hidden;
+      }
+      #bannerStage {
+        transform: scale(0.75);
+      }
+    }
+    @media (max-width: 1250px) {
+      .stage-scaler {
+        width: 950px;
+        height: 237px;
+        overflow: hidden;
+      }
+      #bannerStage {
+        transform: scale(0.6);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header-box">
+    <h1>Banner Sampul LinkedIn Resmi (1584 x 396 px)</h1>
+    <p>Didesain presisi untuk akun <strong>Prestyan Dwi Febrianto</strong> dengan safe-zone foto profil agar nama &amp; keahlian tidak tertutup avatar.</p>
+  </div>
+
+  <div class="preview-card">
+    <div class="stage-scaler">
+      <div id="bannerStage">
+        <!-- Background Layer -->
+        <div class="banner-bg"></div>
+        <div class="banner-gradient-overlay"></div>
+
+        <!-- Simulated Avatar Indicator (Can be hidden during export) -->
+        <div class="avatar-indicator" id="avatarIndicator">
+          <i class="fas fa-user-circle"></i>
+          <span>Area Foto Profil<br>LinkedIn</span>
+        </div>
+
+        <!-- Banner Content -->
+        <div class="banner-content">
+          
+          <!-- Top Row -->
+          <div>
+            <div class="top-badge">
+              <span class="dot"></span>
+              Administrative &amp; Operations Specialist
+            </div>
+            
+            <div class="name-title">
+              PRESTYAN <span class="highlight">DWI FEBRIANTO</span>
+            </div>
+            
+            <div class="tagline">
+              <i class="fas fa-chevron-right"></i>
+              <span>Bridging School &amp; Business Operations with In-House Web System Solutions</span>
+            </div>
+          </div>
+
+          <!-- Bottom Row: 4 Capabilities + Portfolio Live Link -->
+          <div class="pills-row">
+            <div class="pills-group">
+              <div class="cap-pill pill-cyan">
+                <i class="fas fa-university"></i>
+                <span>Operator Dapodik</span>
+              </div>
+              <div class="cap-pill pill-emerald">
+                <i class="fas fa-folder-open"></i>
+                <span>Records &amp; Archiving</span>
+              </div>
+              <div class="cap-pill pill-amber">
+                <i class="fas fa-calculator"></i>
+                <span>Financial Systems</span>
+              </div>
+              <div class="cap-pill pill-purple">
+                <i class="fas fa-code"></i>
+                <span>Web System Builder</span>
+              </div>
+            </div>
+
+            <div class="url-badge">
+              <i class="fas fa-globe"></i>
+              <span>prestianhanif.github.io/mips-academic-suite</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions-bar">
+    <button class="btn-download" id="btnExport" onclick="exportBannerPNG()">
+      <i class="fas fa-download"></i> Unduh Banner LinkedIn (PNG 1584x396)
+    </button>
+    <button class="btn-toggle" onclick="toggleAvatarGuide()">
+      <i class="fas fa-eye"></i> Tampilkan/Sembunyikan Simulasi Avatar
+    </button>
+  </div>
+
+  <!-- Hidden Canvas for Exact 1584x396 Pixel Export -->
+  <canvas id="exportCanvas" width="1584" height="396" style="display:none;"></canvas>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    function toggleAvatarGuide() {
+      const el = document.getElementById('avatarIndicator');
+      el.style.display = (el.style.display === 'none') ? 'flex' : 'none';
+    }
+
+    async function exportBannerPNG() {
+      const btn = document.getElementById('btnExport');
+      const originalText = btn.innerHTML;
+      btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Merender Gambar...';
+      btn.disabled = true;
+
+      // Temporarily hide avatar indicator for clean export
+      const avatarGuide = document.getElementById('avatarIndicator');
+      const prevDisplay = avatarGuide.style.display;
+      avatarGuide.style.display = 'none';
+
+      const bannerStage = document.getElementById('bannerStage');
+      
+      // Temporarily reset transform for 1:1 capture
+      const prevTransform = bannerStage.style.transform;
+      bannerStage.style.transform = 'none';
+
+      try {
+        const canvas = await html2canvas(bannerStage, {
+          width: 1584,
+          height: 396,
+          scale: 1,
+          useCORS: true,
+          allowTaint: true,
+          backgroundColor: '#090e1a'
+        });
+
+        // Trigger download
+        const image = canvas.toDataURL('image/png');
+        const link = document.createElement('a');
+        link.download = 'linkedin_banner_prestyan_dwi_febrianto.png';
+        link.href = image;
+        link.click();
+
+        // Also send to local saver
+        try {
+          fetch('http://localhost:9876', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ image })
+          }).catch(e => console.log('Local save note:', e));
+        } catch (e) {}
+      } catch (err) {
+        alert('Terjadi kesalahan saat mengekspor: ' + err.message);
+      } finally {
+        // Restore elements
+        bannerStage.style.transform = prevTransform;
+        avatarGuide.style.display = prevDisplay;
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      }
+    }
+  </script>
+</body>
+</html>
