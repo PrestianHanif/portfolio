@@ -280,6 +280,129 @@
       font-weight: 600;
     }
 
+    /* ==================== RESPONSIVE SCREEN STYLES (MOBILE & TABLET) ==================== */
+    @media screen and (max-width: 768px) {
+      body {
+        padding: 12px 10px 80px 10px !important;
+      }
+      .top-controls {
+        max-width: 100% !important;
+        padding: 12px 14px !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 10px !important;
+      }
+      .top-controls .info-tag {
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 0.78rem !important;
+      }
+      .btn-action-group {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+        width: 100% !important;
+      }
+      .btn-ctrl {
+        justify-content: center !important;
+        padding: 9px 14px !important;
+        font-size: 0.82rem !important;
+      }
+      .a4-sheet {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 20px 14px !important;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+        border-radius: 8px !important;
+      }
+      .header-main-row {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 12px !important;
+      }
+      .cv-photo-box {
+        width: 78px !important;
+        height: 98px !important;
+      }
+      .cv-name {
+        font-size: 1.45rem !important;
+        text-align: center !important;
+      }
+      .cv-headline {
+        font-size: 0.85rem !important;
+        text-align: center !important;
+      }
+      .cv-contact {
+        justify-content: center !important;
+        gap: 6px 8px !important;
+        font-size: 0.74rem !important;
+      }
+      .cv-contact .sep {
+        display: none !important;
+      }
+      .cv-contact span, .cv-contact a {
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 5px !important;
+        background: #f1f5f9 !important;
+        padding: 4px 9px !important;
+        border-radius: 6px !important;
+        border: 1px solid #e2e8f0 !important;
+        word-break: break-all !important;
+      }
+      .section-title {
+        font-size: 0.82rem !important;
+        margin-top: 12px !important;
+      }
+      .summary-text {
+        text-align: left !important;
+        font-size: 0.78rem !important;
+        line-height: 1.45 !important;
+      }
+      .item-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2px !important;
+        margin-bottom: 4px !important;
+      }
+      .item-title {
+        font-size: 0.83rem !important;
+      }
+      .item-company {
+        display: block !important;
+        margin-top: 1px !important;
+      }
+      .item-date {
+        font-size: 0.72rem !important;
+        color: #0284c7 !important;
+        margin-top: 1px !important;
+      }
+      .item-bullets {
+        padding-left: 16px !important;
+        font-size: 0.76rem !important;
+        line-height: 1.4 !important;
+      }
+      .skill-line {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 2px !important;
+        margin-bottom: 6px !important;
+      }
+      .skill-line strong {
+        min-width: unset !important;
+        display: block !important;
+        color: #0284c7 !important;
+        font-size: 0.78rem !important;
+      }
+      .edu-line {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 2px !important;
+        font-size: 0.78rem !important;
+      }
+    }
+
     /* ==================== PRINT MEDIA STYLES (ATS PDF) ==================== */
     @media print {
       @page {

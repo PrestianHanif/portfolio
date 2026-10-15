@@ -38,6 +38,7 @@
 
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    section, [id] { scroll-margin-top: 105px; }
     body {
       background-color: var(--bg-dark);
       color: var(--text-main);
@@ -435,6 +436,139 @@
       border-bottom: 1px solid rgba(255, 255, 255, 0.08);
       padding: 18px 24px;
       border-radius: 20px 20px 0 0;
+    }
+
+    /* ==================== RESPONSIVE MEDIA QUERIES ==================== */
+    @media (max-width: 991.98px) {
+      .suite-navbar .container-fluid > .d-flex {
+        display: grid !important;
+        grid-template-columns: 1fr auto;
+        row-gap: 8px;
+        align-items: center;
+      }
+      .suite-navbar a[href="#overview"] {
+        grid-column: 1;
+        grid-row: 1;
+      }
+      .suite-navbar .d-flex.align-items-center.gap-2 {
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+      }
+      .suite-nav-pills {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100% !important;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        flex-wrap: nowrap !important;
+        padding: 4px;
+        border-radius: 12px;
+      }
+      .suite-nav-pills::-webkit-scrollbar { display: none; }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding-bottom: 80px !important;
+      }
+      .hero-wrap {
+        padding: 2.2rem 0 1.8rem;
+      }
+      .hero-badge {
+        font-size: 0.72rem;
+        padding: 5px 12px;
+        margin-bottom: 1rem;
+        max-width: 100%;
+        white-space: normal;
+        line-height: 1.35;
+      }
+      .hero-title {
+        font-size: 1.65rem !important;
+        line-height: 1.25;
+        margin-bottom: 1rem;
+      }
+      .hero-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+      .fs-2 {
+        font-size: 1.45rem !important;
+      }
+      .module-card {
+        padding: 1.35rem;
+      }
+      .module-icon-box {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+      }
+      .module-title {
+        font-size: 1.15rem;
+      }
+      .module-desc {
+        font-size: 0.85rem;
+      }
+      .badge-tech {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+      }
+      .arch-box {
+        padding: 1rem;
+      }
+      .arch-box .col-md-4, .arch-box .col-md-6 {
+        margin-top: 0.5rem !important;
+      }
+      .arch-box .p-3 {
+        padding: 0.85rem !important;
+      }
+      .arch-box .fs-3 {
+        font-size: 1.4rem !important;
+      }
+      #career-kit {
+        padding-bottom: 100px !important;
+      }
+      #career-kit h2.display-6 {
+        font-size: 1.6rem !important;
+      }
+      #copy-headline, #copy-about {
+        font-size: 0.78rem !important;
+        padding: 0.75rem !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+      .btn-copy-kit {
+        padding: 5px 12px;
+        font-size: 0.74rem;
+      }
+    }
+
+    @media (max-width: 575.98px) {
+      .brand-avatar {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        border-radius: 9px;
+      }
+      .brand-title {
+        font-size: 0.98rem;
+      }
+      .brand-sub {
+        font-size: 0.62rem;
+      }
+      .suite-navbar .btn-sm {
+        font-size: 0.72rem !important;
+        padding: 4px 9px !important;
+      }
+      .suite-nav-pills .nav-link {
+        font-size: 0.72rem;
+        padding: 0.4rem 0.7rem;
+        gap: 0.35rem;
+      }
     }
   </style>
 </head>
@@ -1096,12 +1230,19 @@ HTML5, Modern Vanilla CSS, JavaScript (ES6+), DOM Manipulation, Lucide Icons, Gi
 }
 @media (max-width: 768px) {
   .demo-suite-bar {
-    bottom: 12px;
-    padding: 5px 8px;
+    bottom: 10px;
+    padding: 4px 6px;
     gap: 3px;
+    max-width: 96vw;
+    -webkit-overflow-scrolling: touch;
   }
   .demo-suite-bar .suite-brand { display: none; }
-  .demo-suite-bar a.demo-pill { font-size: 0.7rem; padding: 5px 8px; }
+  .demo-suite-bar a.demo-pill,
+  .demo-suite-bar .career-link {
+    font-size: 0.68rem;
+    padding: 5px 8px;
+    gap: 4px;
+  }
 }
 </style>
 <div class="demo-suite-bar">
