@@ -224,6 +224,32 @@
     .icon-blue { background: rgba(14, 165, 233, 0.15); color: #38bdf8; border: 1px solid rgba(14, 165, 233, 0.3); }
     .icon-green { background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); }
     .icon-amber { background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3); }
+    .icon-purple { background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); }
+    .icon-cyan { background: rgba(6, 182, 212, 0.15); color: #22d3ee; border: 1px solid rgba(6, 182, 212, 0.3); }
+
+    .btn-outline-purple {
+      border: 1px solid #a855f7;
+      color: #c084fc;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-purple:hover {
+      background: #a855f7 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 16px rgba(168, 85, 247, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline-cyan {
+      border: 1px solid #06b6d4;
+      color: #22d3ee;
+      transition: all 0.25s ease;
+    }
+    .btn-outline-cyan:hover {
+      background: #06b6d4 !important;
+      color: #ffffff !important;
+      box-shadow: 0 4px 16px rgba(6, 182, 212, 0.4);
+      transform: translateY(-2px);
+    }
 
     .module-title {
       font-family: var(--font-heading);
@@ -436,13 +462,19 @@
             <i class="fas fa-layer-group"></i> <span>Overview &amp; Architecture</span>
           </a>
           <a href="index.html" class="nav-link">
-            <i class="fas fa-user-graduate"></i> <span>Aplikasi: Data Santri</span>
+            <i class="fas fa-user-graduate"></i> <span>Data Santri</span>
           </a>
           <a href="dataguru.html" class="nav-link">
-            <i class="fas fa-chalkboard-teacher"></i> <span>Aplikasi: Data Guru</span>
+            <i class="fas fa-chalkboard-teacher"></i> <span>Data Guru</span>
           </a>
           <a href="pmb.html" class="nav-link">
-            <i class="fas fa-file-signature"></i> <span>Aplikasi: Portal PMB</span>
+            <i class="fas fa-file-signature"></i> <span>Portal PMB</span>
+          </a>
+          <a href="webinar/index.html" class="nav-link">
+            <i class="fas fa-video"></i> <span>Webinar KOWPI</span>
+          </a>
+          <a href="ebook/index.html" class="nav-link">
+            <i class="fas fa-book-open"></i> <span>Ebook KOWPI</span>
           </a>
           <a href="#career-kit" class="nav-link">
             <i class="fas fa-briefcase"></i> <span>LinkedIn &amp; Glints Kit</span>
@@ -454,7 +486,7 @@
           <a href="https://github.com/PrestianHanif" target="_blank" class="btn btn-sm btn-outline-light rounded-pill px-3 py-2 fw-semibold">
             <i class="fab fa-github me-1"></i> GitHub
           </a>
-          <a href="#pane-careerkit" onclick="document.getElementById('tab-careerkit').click()" class="btn btn-sm btn-primary rounded-pill px-3 py-2 fw-bold" style="background: linear-gradient(135deg, #0284c7, #0ea5e9); border:none;">
+          <a href="#career-kit" class="btn btn-sm btn-primary rounded-pill px-3 py-2 fw-bold" style="background: linear-gradient(135deg, #0284c7, #0ea5e9); border:none;">
             <i class="fas fa-id-badge me-1"></i> Profil Karir
           </a>
         </div>
@@ -463,33 +495,33 @@
     </div>
   </nav>
 
-  <!-- ==================== MAIN TAB CONTENT CONTAINER ==================== -->
-  <main class="tab-content" id="suiteTabContent">
+  <!-- ==================== MAIN CONTENT CONTAINER ==================== -->
+  <main id="suiteTabContent">
 
-    <!-- ==================== PANE 1: OVERVIEW & ARCHITECTURE ==================== -->
-    <section class="tab-pane fade show active" id="pane-overview" role="tabpanel">
+    <!-- ==================== OVERVIEW & PORTFOLIO SHOWCASE ==================== -->
+    <section id="pane-overview">
       
       <!-- Hero -->
       <div class="hero-wrap">
         <div class="container px-3 px-xl-4 text-center">
           <div class="hero-badge">
             <span class="status-dot"></span>
-            Enterprise Academic ERP Suite &bull; PKBM MIPS
+            Enterprise Academic ERP &bull; KOWPI Digital Media Suite
           </div>
           <h1 class="hero-title">
-            Membangun Ekosistem Digital<br>
-            <span class="text-gradient">Sekolah &amp; Pondok Pesantren Terpadu</span>
+            Membangun Solusi Web Terintegrasi &amp;<br>
+            <span class="text-gradient">Ekosistem Edukasi &amp; Publikasi Digital</span>
           </h1>
           <p class="hero-desc mx-auto">
-            Rangkaian 3 aplikasi web terintegrasi yang mendigitalisasi siklus akademik sekolah: mulai dari Penerimaan Santri Baru (PMB), Manajemen Buku Induk Santri, hingga Sistem Informasi SDM Guru &amp; Tendik.
+            Portofolio 5 aplikasi web unggulan: 3 modul Enterprise ERP Sekolah Terpadu (SIM Guru, Buku Induk Santri, PMB Online) berbasis PHP CodeIgniter &amp; MySQL, serta 2 platform digital interaktif (Katalog Webinar &amp; Perpustakaan Ebook) berbasis Modern Web Technologies.
           </p>
 
           <!-- Quick Stats Row -->
           <div class="row g-3 justify-content-center max-w-900 mx-auto mb-5">
             <div class="col-6 col-md-3">
               <div class="glass-card p-3 text-center">
-                <div class="fs-2 fw-bold text-info">3</div>
-                <div class="small text-muted fw-semibold">Modul Terintegrasi</div>
+                <div class="fs-2 fw-bold text-info">5</div>
+                <div class="small text-muted fw-semibold">Proyek Web Live</div>
               </div>
             </div>
             <div class="col-6 col-md-3">
@@ -507,15 +539,25 @@
             <div class="col-6 col-md-3">
               <div class="glass-card p-3 text-center">
                 <div class="fs-2 fw-bold text-primary">100%</div>
-                <div class="small text-muted fw-semibold">Paperless Workflow</div>
+                <div class="small text-muted fw-semibold">Responsive &amp; Live</div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- The 3 Core Modules -->
+      <!-- The 5 Core Modules -->
       <div class="container px-3 px-xl-4 pb-5">
+        
+        <!-- Section 1: Academic ERP Suite (MIPS) -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+          <div>
+            <span class="badge bg-primary bg-opacity-20 text-info px-3 py-1 rounded-pill fw-bold text-uppercase small">Enterprise ERP Suite</span>
+            <h3 class="fw-bold text-white mt-2 mb-0"><i class="fas fa-school text-info me-2"></i> MIPS Integrated Academic Management Suite</h3>
+          </div>
+          <span class="text-muted small">3 Modul Terintegrasi &bull; PHP CodeIgniter 3 &bull; MySQL Relational DB</span>
+        </div>
+
         <div class="row g-4 mb-5">
           
           <!-- Module 1: SIM Tendik -->
@@ -577,45 +619,106 @@
 
         </div>
 
+        <!-- Section 2: KOWPI Digital Publication Suite -->
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4 pt-3 border-top border-secondary border-opacity-25">
+          <div>
+            <span class="badge px-3 py-1 rounded-pill fw-bold text-uppercase small" style="background: rgba(168,85,247,0.2); color: #c084fc;">Digital Media &amp; Publications</span>
+            <h3 class="fw-bold text-white mt-2 mb-0"><i class="fas fa-laptop-code text-purple me-2" style="color: #c084fc;"></i> KOWPI Digital Publications &amp; EdTech Portals</h3>
+          </div>
+          <span class="text-muted small">2 Platform Interaktif &bull; Modern Vanilla CSS &bull; Dynamic JS Filter Engine</span>
+        </div>
+
+        <div class="row g-4 mb-5">
+          
+          <!-- Module 4: Webinar Catalog -->
+          <div class="col-lg-6">
+            <div class="glass-card module-card">
+              <div class="module-icon-box icon-purple">
+                <i class="fas fa-video"></i>
+              </div>
+              <h3 class="module-title">Katalog Webinar Series KOWPI</h3>
+              <p class="module-desc">
+                Platform penjelajah program webinar berseri dengan interaktivitas tinggi. Dilengkapi sistem filter kategori instan berbasis JavaScript (Semua, Akan Datang, Selesai), modal informasi pemateri, jadwal event terperinci, dan direct registration form.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge-tech"><i class="fab fa-js text-warning"></i> Filter Engine</span>
+                <span class="badge-tech"><i class="fas fa-calendar-check text-info"></i> Event Scheduler</span>
+                <span class="badge-tech"><i class="fas fa-layer-group text-primary"></i> Modular Cards</span>
+                <span class="badge-tech"><i class="fas fa-mobile-alt text-success"></i> Fully Responsive</span>
+              </div>
+              <a href="webinar/index.html" class="btn btn-outline-purple w-100 rounded-pill fw-bold"><i class="fas fa-external-link-alt me-1"></i> Buka Katalog Webinar KOWPI &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Module 5: Ebook Catalog -->
+          <div class="col-lg-6">
+            <div class="glass-card module-card">
+              <div class="module-icon-box icon-cyan">
+                <i class="fas fa-book-open"></i>
+              </div>
+              <h3 class="module-title">Katalog Ebook Library KOWPI</h3>
+              <p class="module-desc">
+                Perpustakaan buku digital modern dengan tampilan visual kaya dan ergonomis. Mengintegrasikan pencarian buku instan, klasifikasi genre/kategori, kartu buku interaktif dengan rating pembaca, sinopsis lengkap, serta gateway pengunduhan materi.
+              </p>
+              <div class="d-flex flex-wrap gap-2 mb-4">
+                <span class="badge-tech"><i class="fas fa-search text-warning"></i> Dynamic Search</span>
+                <span class="badge-tech"><i class="fas fa-book-reader text-success"></i> Digital Library</span>
+                <span class="badge-tech"><i class="fab fa-css3-alt text-info"></i> Modern CSS Grid</span>
+                <span class="badge-tech"><i class="fas fa-download text-primary"></i> Download Gateway</span>
+              </div>
+              <a href="ebook/index.html" class="btn btn-outline-cyan w-100 rounded-pill fw-bold"><i class="fas fa-external-link-alt me-1"></i> Buka Katalog Ebook KOWPI &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
         <!-- Integrated Architecture Diagram -->
         <div class="glass-card p-4 p-lg-5">
           <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
             <div>
-              <h4 class="fw-bold mb-1"><i class="fas fa-project-diagram text-info me-2"></i> Arsitektur Sistem Terintegrasi</h4>
-              <p class="text-muted small mb-0">Alur pertukaran data antara pendaftaran, kesiswaan, dan kepegawaian institusi.</p>
+              <h4 class="fw-bold mb-1"><i class="fas fa-project-diagram text-info me-2"></i> Arsitektur Ekosistem Web Terpadu</h4>
+              <p class="text-muted small mb-0">Alur arsitektur fullstack: Sistem Informasi Akademik Sekolah &amp; Platform Publikasi Digital Interaktif.</p>
             </div>
             <span class="badge bg-primary bg-opacity-25 text-info px-3 py-2 rounded-pill fw-semibold">
-              <i class="fas fa-shield-alt me-1"></i> Role-Based Access Control (RBAC)
+              <i class="fas fa-shield-alt me-1"></i> Fullstack Architecture
             </span>
           </div>
 
           <div class="arch-box text-light">
-            <div class="row align-items-center g-4 text-center">
-              <div class="col-md-3">
-                <div class="p-3 rounded-4 bg-dark border border-warning border-opacity-50">
+            <div class="row align-items-center g-3 text-center">
+              <div class="col-md-4">
+                <div class="p-3 rounded-4 bg-dark border border-warning border-opacity-50 h-100">
                   <i class="fas fa-file-signature text-warning fs-3 mb-2"></i>
-                  <div class="fw-bold">1. Portal PMB</div>
-                  <div class="small text-muted mt-1">Pendaftaran &bull; Seleksi &bull; Verifikasi Berkas</div>
+                  <div class="fw-bold">1. Portal PMB Online</div>
+                  <div class="small text-muted mt-1">Conditional Logic Pendaftaran &bull; Seleksi &bull; Infaq Calculator</div>
                 </div>
-              </div>
-              <div class="col-md-1 d-none d-md-block">
-                <i class="fas fa-arrow-right text-muted fs-4"></i>
               </div>
               <div class="col-md-4">
-                <div class="p-3 rounded-4 bg-dark border border-success border-opacity-50">
+                <div class="p-3 rounded-4 bg-dark border border-success border-opacity-50 h-100">
                   <i class="fas fa-user-graduate text-success fs-3 mb-2"></i>
                   <div class="fw-bold">2. SIM Santri &amp; Buku Induk</div>
-                  <div class="small text-muted mt-1">NIS Generator &bull; Rekap Rombel &bull; Histori Pindahan</div>
+                  <div class="small text-muted mt-1">NIS Generator &bull; Rekap Rombel &bull; Histori Mutasi &bull; PDF Export</div>
                 </div>
               </div>
-              <div class="col-md-1 d-none d-md-block">
-                <i class="fas fa-arrows-split text-muted fs-4"></i>
-              </div>
-              <div class="col-md-3">
-                <div class="p-3 rounded-4 bg-dark border border-info border-opacity-50">
+              <div class="col-md-4">
+                <div class="p-3 rounded-4 bg-dark border border-info border-opacity-50 h-100">
                   <i class="fas fa-chalkboard-teacher text-info fs-3 mb-2"></i>
                   <div class="fw-bold">3. SIM Tendik &amp; Guru</div>
-                  <div class="small text-muted mt-1">Wali Kelas &bull; Penugasan &bull; Struktur SDM</div>
+                  <div class="small text-muted mt-1">Staf Direktori &bull; Filter Onsite/Stay &bull; Bagan Organisasi</div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <div class="p-3 rounded-4 bg-dark border border-opacity-50 h-100" style="border-color: rgba(168, 85, 247, 0.4) !important;">
+                  <i class="fas fa-video fs-3 mb-2" style="color: #c084fc;"></i>
+                  <div class="fw-bold" style="color: #c084fc;">4. Platform Katalog Webinar (KOWPI)</div>
+                  <div class="small text-muted mt-1">Client-Side Filtering &bull; Event Categorization &bull; Registration Gateway</div>
+                </div>
+              </div>
+              <div class="col-md-6 mt-3">
+                <div class="p-3 rounded-4 bg-dark border border-opacity-50 h-100" style="border-color: rgba(6, 182, 212, 0.4) !important;">
+                  <i class="fas fa-book-open fs-3 mb-2" style="color: #22d3ee;"></i>
+                  <div class="fw-bold" style="color: #22d3ee;">5. Perpustakaan Ebook Digital (KOWPI)</div>
+                  <div class="small text-muted mt-1">Interactive Book Catalog &bull; Genre Filtering &bull; Reader Reviews &amp; Download</div>
                 </div>
               </div>
             </div>
@@ -626,21 +729,19 @@
       </div>
     </section>
 
-    
-<div id="career-kit">
-<!-- ==================== PANE 5: LINKEDIN & GLINTS CAREER KIT ==================== -->
-    <section class="tab-pane fade" id="pane-careerkit" role="tabpanel">
-      <div class="container px-3 px-xl-4 py-5 max-w-1000">
+    <!-- ==================== LINKEDIN & GLINTS CAREER KIT ==================== -->
+    <section class="py-5" id="career-kit" style="padding-bottom: 120px !important;">
+      <div class="container px-3 px-xl-4 max-w-1000">
         
         <div class="text-center mb-5">
-          <span class="badge bg-success bg-opacity-20 text-success px-3 py-2 rounded-pill fw-bold mb-3">
+          <span class="badge px-3 py-2 rounded-pill fw-bold mb-3" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.85rem;">
             <i class="fas fa-check-double me-1"></i> Ready-to-Use Copywriting Kit
           </span>
           <h2 class="fw-bold text-white display-6">
             Optimasi Profil LinkedIn &amp; Glints
           </h2>
-          <p class="text-muted max-w-600 mx-auto">
-            Salin teks profesional di bawah ini langsung ke profil Anda untuk menonjolkan transisi karir ke Fullstack Web Developer / Software Engineer.
+          <p class="max-w-600 mx-auto" style="color: #94a3b8; font-size: 0.95rem;">
+            Salin teks profesional di bawah ini langsung ke profil Anda untuk menonjolkan portofolio Fullstack Web Developer yang mencakup sistem ERP sekolah serta katalog publikasi digital interaktif.
           </p>
         </div>
 
@@ -655,8 +756,8 @@
                   <i class="fas fa-copy"></i> Salin
                 </button>
               </div>
-              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small font-monospace mb-4" id="copy-headline">
-Fullstack Web Developer | PHP (CodeIgniter), MySQL, JavaScript | Educational System Architect &amp; Software Solutions
+              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small font-monospace mb-4" id="copy-headline" style="white-space: pre-wrap;">
+Fullstack Web Developer | PHP (CodeIgniter), MySQL, JavaScript | Educational ERP &amp; Interactive Web Portals
               </div>
 
               <div class="d-flex align-items-center justify-content-between mb-3">
@@ -665,35 +766,43 @@ Fullstack Web Developer | PHP (CodeIgniter), MySQL, JavaScript | Educational Sys
                   <i class="fas fa-copy"></i> Salin
                 </button>
               </div>
-              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small" id="copy-about" style="max-height: 250px; overflow-y: auto;">
-Saya adalah Fullstack Web Developer yang berfokus pada pengembangan sistem manajemen berbasis web yang efisien, terukur, dan berorientasi pada penyelesaian masalah nyata.
+              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small" id="copy-about" style="white-space: pre-wrap; max-height: 280px; overflow-y: auto;">
+Saya adalah Fullstack Web Developer yang berfokus pada pengembangan sistem manajemen berbasis web dan platform publikasi digital yang efisien, terukur, serta berorientasi pada pemecahan masalah nyata.
 
-Telah merancang dan membangun ekosistem akademik terpadu untuk PKBM Madina Islamic Premier School (MIPS), mencakup:
-1. SIM Tendik &amp; Guru (Manajemen SDM Pendidik &amp; Hierarki Organisasi)
-2. SIM Santri &amp; Buku Induk Digital (Pengarsipan &bull; Validasi NIS &bull; Pelacakan Mutasi Pindahan)
-3. Portal PMB Online (Smart Conditional Logic Form &bull; Penerimaan Santri Baru)
+Portofolio Proyek Unggulan (Live Demo):
+1. MIPS Academic ERP Suite (Sistem Informasi Sekolah Terpadu):
+- SIM Tendik &amp; Guru: Manajemen SDM pendidik, filter pegawai onsite/stay, dan bagan struktur organisasi interaktif.
+- SIM Santri &amp; Buku Induk Digital: Digitalisasi rekam jejak santri, validasi nomor induk (NIS) otomatis, pencarian multi-kriteria 360+ santri, serta cetak lembar induk resmi.
+- Portal PMB Online: Formulir pendaftaran cerdas berbasis conditional logic (Santri Baru vs Santri Pindahan) dengan integrasi pengumuman hasil seleksi instan.
+
+2. KOWPI Digital Publication &amp; Event Suite:
+- Katalog Webinar Series: Platform interaktif penjelajah webinar berseri dengan instant client-side category filtering dan modular event cards.
+- Perpustakaan Ebook Digital: Katalog buku elektronik modern dengan grid responsif, filter genre/kategori, dan gateway download interaktif.
 
 Tech Stack Utama:
 - Backend: PHP 7.4/8.x (CodeIgniter MVC Architecture), RESTful APIs
-- Database: MySQL (Relational Schema, Indexing, Query Optimization)
-- Frontend: JavaScript, Bootstrap, jQuery, DataTables, HTML5/CSS3
-- Workflow: Git, GitHub, AI-Augmented Engineering (Google Antigravity)
+- Frontend: JavaScript (ES6+), Vanilla CSS, Bootstrap 5, jQuery, DataTables, HTML5/CSS3
+- Database: MySQL (Relational Schema Design, Indexing, Query Optimization)
+- Workflow: Git, GitHub Pages, AI-Augmented Software Engineering
 
+Live Portfolio Showcase: https://prestianhanif.github.io/mips-academic-suite/portfolio.html
 Terbuka untuk peluang karir Fullstack / Backend / Frontend Developer.
               </div>
             </div>
           </div>
 
-          <!-- Box 2: Glints Project Card -->
+          <!-- Box 2: Glints Project Cards (ERP + Digital Media) -->
           <div class="col-lg-6">
             <div class="glass-card p-4 h-100">
-              <div class="d-flex align-items-center justify-content-between mb-3">
-                <h5 class="fw-bold text-white mb-0"><i class="fas fa-briefcase text-warning me-2"></i> Glints Project Entry</h5>
-                <button class="btn-copy-kit" onclick="copyText('copy-glints-proj')">
+              
+              <!-- Glints Project 1: MIPS ERP -->
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="fw-bold text-white mb-0"><i class="fas fa-briefcase text-warning me-2"></i> Glints Proyek 1: MIPS ERP Suite</h5>
+                <button class="btn-copy-kit" onclick="copyText('copy-glints-proj1')">
                   <i class="fas fa-copy"></i> Salin
                 </button>
               </div>
-              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small" id="copy-glints-proj" style="max-height: 420px; overflow-y: auto;">
+              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small mb-4" id="copy-glints-proj1" style="white-space: pre-wrap; max-height: 180px; overflow-y: auto;">
 Judul Proyek: MIPS Integrated Academic Management ERP Suite
 Peran: Fullstack Web Developer
 Tautan Demo: https://prestianhanif.github.io/mips-academic-suite
@@ -703,11 +812,35 @@ Deskripsi Proyek:
 Merancang dan mengimplementasikan sistem informasi akademik terpadu berbasis web yang mendigitalisasi operasional harian institusi pendidikan MIPS:
 - Membangun portal penerimaan murid baru (PMB) online dengan logika formulir dinamis (Conditional Logic) yang membedakan alur santri baru dan santri pindahan secara otomatis.
 - Mengembangkan modul digitalisasi Buku Induk Santri dengan pencarian cepat multi-kriteria untuk lebih dari 360 santri dan otomasi pembuatan NIS.
-- Membuat modul SIM Tendik untuk pengelolaan direktori 38+ staf pendidik dengan sistem hak akses bertingkat (RBAC) serta visualisasi bagan struktur kepegawaian.
+- Membuat modul SIM Tendik untuk pengelolaan direktori 40+ staf pendidik dengan sistem hak akses bertingkat (RBAC) serta visualisasi bagan struktur kepegawaian.
 
 Teknologi yang Digunakan:
 PHP (CodeIgniter), MySQL, JavaScript, Bootstrap, DataTables, FPDF, Git.
               </div>
+
+              <!-- Glints Project 2: KOWPI Digital Media -->
+              <div class="d-flex align-items-center justify-content-between mb-2">
+                <h5 class="fw-bold text-white mb-0"><i class="fas fa-laptop-code text-purple me-2" style="color: #c084fc;"></i> Glints Proyek 2: KOWPI Portals</h5>
+                <button class="btn-copy-kit" onclick="copyText('copy-glints-proj2')">
+                  <i class="fas fa-copy"></i> Salin
+                </button>
+              </div>
+              <div class="p-3 rounded-3 bg-dark border border-secondary border-opacity-50 text-light small" id="copy-glints-proj2" style="white-space: pre-wrap; max-height: 180px; overflow-y: auto;">
+Judul Proyek: KOWPI Digital Publication &amp; Webinar Catalog Platform
+Peran: Frontend &amp; Web Developer
+Tautan Demo: https://prestianhanif.github.io/mips-academic-suite/webinar/
+Repositori GitHub: https://github.com/PrestianHanif
+
+Deskripsi Proyek:
+Membangun platform portal publikasi dan edukasi digital interaktif untuk ekosistem KOWPI:
+- Mengembangkan platform Katalog Webinar KOWPI dengan dynamic filtering berbasis JavaScript murni untuk navigasi jadwal webinar aktif, arsip rekaman, dan registrasi peserta instan.
+- Membangun Perpustakaan Ebook Digital KOWPI dengan desain card responsif modern, integrasi pencarian cepat, filter genre/kategori, dan download gateway.
+- Memastikan performa 100% responsif di seluruh perangkat mobile &amp; desktop dengan semantic HTML5 dan Vanilla CSS murni tanpa bloat dependensi.
+
+Teknologi yang Digunakan:
+HTML5, Modern Vanilla CSS, JavaScript (ES6+), DOM Manipulation, Lucide Icons, Git.
+              </div>
+
             </div>
           </div>
 
@@ -878,23 +1011,7 @@ PHP (CodeIgniter), MySQL, JavaScript, Bootstrap, DataTables, FPDF, Git.
     }
   </script>
 
-  <a href="index.html" class="demo-pill">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-    <span>Data Santri</span>
-  </a>
-  <a href="dataguru.html" class="demo-pill">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-    <span>Data Guru</span>
-  </a>
-  <a href="pmb.html" class="demo-pill">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-    <span>Portal PMB</span>
-  </a>
-  <a href="portfolio.html" class="career-link active">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-    <span>Overview &amp; CV</span>
-  </a>
-</div>
+
 <!-- FLOATING DEMO NAVIGATION SWITCHER -->
 <style>
 .demo-suite-bar {
@@ -1019,5 +1136,3 @@ PHP (CodeIgniter), MySQL, JavaScript, Bootstrap, DataTables, FPDF, Git.
 </div>
 </body>
 </html>
-
-</div>
