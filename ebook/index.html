@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Ebook Resmi – Komunitas Waris Planning Indonesia | Kowpi.id</title>
+    <meta name="description" content="Pusat literasi dan unduh ebook panduan fikih harta anak yatim, hukum waris Islam, wasiat, dan muamalah syariah 100% gratis dari Kowpi.id.">
+    <meta name="keywords" content="katalog ebook kowpi, ebook waris islam, ebook anak yatim, fikih muamalah, panduan faraidh">
+    <link rel="icon" type="image/png" href="img/favicon-kowpi.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+        <a href="#" class="navbar-brand" aria-label="Kowpi.id">
+            <img src="img/logo-kowpi.png" alt="Logo Kowpi.id">
+            <div class="navbar-tagline">
+                <span class="title">Ebook Library</span>
+                <span class="desc">Katalog Resmi Kowpi.id</span>
+            </div>
+        </a>
+
+        <div class="navbar-actions">
+            <a href="https://kowpi.id" class="btn-nav-ghost" target="_blank" title="Buka Portal Utama Kowpi.id">
+                <i data-lucide="globe" style="width:14px;height:14px;"></i>
+                <span>Kowpi.id Utama</span>
+                <i data-lucide="external-link" style="width:12px;height:12px;opacity:0.6;"></i>
+            </a>
+            <a href="#katalog" class="btn-nav-primary">
+                <i data-lucide="book-open" style="width:14px;height:14px;"></i>
+                <span>Jelajahi Ebook</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="hero-bg-glow"></div>
+    <div class="hero-grid-pattern"></div>
+
+    <div class="container">
+        <div class="hero-content">
+            <div class="hero-eyebrow">
+                <i data-lucide="sparkles" style="width:14px;height:14px;"></i>
+                <span>Perpustakaan Digital Syariah</span>
+            </div>
+
+            <h1 class="hero-title">
+                Panduan Fikih & Tata Kelola <br>
+                <span class="highlight">Harta Keluarga Muslim</span>
+            </h1>
+
+            <p class="hero-subtitle">
+                Koleksi buku panduan praktis fikih muamalah, perlindungan harta anak yatim, waris, dan wasiat yang komprehensif, terpercaya, dan 100% gratis dipersembahkan untuk umat.
+            </p>
+
+            <!-- SEARCH & FILTER WRAPPER -->
+            <div class="filter-wrapper">
+                <div class="search-box">
+                    <i data-lucide="search" class="search-icon" style="width:20px;height:20px;"></i>
+                    <input type="text" id="catalogSearch" class="search-input" placeholder="Cari judul ebook, topik fikih, atau penulis...">
+                </div>
+
+                <div class="category-pills">
+                    <div class="cat-pill active" data-cat="all">Semua Ebook</div>
+                    <div class="cat-pill" data-cat="yatim">Fikih Anak Yatim</div>
+                    <div class="cat-pill" data-cat="waris">Hukum Waris & Faraidh</div>
+                    <div class="cat-pill" data-cat="wasiat">Wasiat & Hibah</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CATALOG SECTION -->
+<section class="catalog-section" id="katalog">
+    <div class="container">
+        <div class="section-header">
+            <div>
+                <h2 class="section-title">Koleksi <span>Ebook Edukasi</span></h2>
+                <p style="color:var(--text-secondary); font-size:0.9rem; margin-top:4px;">Klik pada mockup buku untuk membuka halaman unduhan lengkap</p>
+            </div>
+            <div class="book-count-badge">
+                Menampilkan <strong id="visibleCount">3</strong> Ebook
+            </div>
+        </div>
+
+        <!-- CATALOG GRID -->
+        <div class="catalog-grid" id="catalogGrid">
+
+            <!-- EBOOK 1: YATIM (ACTIVE) -->
+            <article class="book-card-item" data-categories="yatim muamalah">
+                <a href="ebook-anak-yatim/" data-local-href="/LP-yatim/" class="book-mockup-stage" data-href="ebook-anak-yatim/" title="Klik untuk membuka Ebook Panduan Fikih Harta Anak Yatim">
+                    <div class="status-ribbon ribbon-active">
+                        <i data-lucide="check-circle-2" style="width:12px;height:12px;display:inline-block;vertical-align:-1px;margin-right:2px;"></i>
+                        Tersedia • Gratis
+                    </div>
+
+                    <!-- 3D Book Mockup -->
+                    <div class="book-3d">
+                        <div class="book-spine"></div>
+                        <div class="book-pages-edge"></div>
+                        <div class="book-cover-front">
+                            <img src="img/cover-buku.jpeg" alt="Cover Panduan Fikih Harta Anak Yatim" onerror="this.src='img/cover-buku.jpg';">
+                        </div>
+                    </div>
+                </a>
+
+                <div class="book-card-body">
+                    <div class="book-meta">
+                        <span class="book-meta-item">
+                            <i data-lucide="file-text" style="width:13px;height:13px;color:var(--gold);"></i>
+                            46 Halaman PDF
+                        </span>
+                        <span>•</span>
+                        <span class="book-meta-item">
+                            <i data-lucide="book" style="width:13px;height:13px;color:var(--gold);"></i>
+                            Fikih Yatim
+                        </span>
+                    </div>
+
+                    <h3 class="book-item-title">
+                        <a href="ebook-anak-yatim/" data-local-href="/LP-yatim/">Panduan Fikih Harta Anak Yatim</a>
+                    </h3>
+
+                    <div class="book-author">
+                        <i data-lucide="user-check" style="width:14px;height:14px;"></i>
+                        <span>Muhammad Abu Rivai, MH, CFP</span>
+                    </div>
+
+                    <p class="book-desc">
+                        Panduan praktis dan sesuai syariat bagi wali dan keluarga dalam mengelola harta waris anak yatim. Melindungi dari ancaman dosa besar memakan harta mereka secara zalim.
+                    </p>
+
+                    <div class="card-cta-area">
+                        <a href="ebook-anak-yatim/" data-local-href="/LP-yatim/" class="btn-book-action btn-active-action">
+                            <span>Baca & Unduh Sekarang</span>
+                            <i data-lucide="arrow-right" style="width:16px;height:16px;"></i>
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- EBOOK 2: WARIS & FARAIDH (COMING SOON) -->
+            <article class="book-card-item" data-categories="waris faraidh">
+                <div class="book-mockup-stage" title="Segera Terbit: Hukum Waris & Faraidh Praktis">
+                    <div class="status-ribbon ribbon-upcoming">
+                        <i data-lucide="clock" style="width:12px;height:12px;display:inline-block;vertical-align:-1px;margin-right:2px;"></i>
+                        Segera Terbit
+                    </div>
+
+                    <!-- 3D Book Mockup -->
+                    <div class="book-3d">
+                        <div class="book-spine"></div>
+                        <div class="book-pages-edge"></div>
+                        <div class="book-cover-front">
+                            <img src="img/cover-waris.jpg" alt="Cover Hukum Waris & Faraidh Praktis">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card-body">
+                    <div class="book-meta">
+                        <span class="book-meta-item">
+                            <i data-lucide="calendar" style="width:13px;height:13px;color:var(--gold);"></i>
+                            Rilis Q4 2026
+                        </span>
+                        <span>•</span>
+                        <span class="book-meta-item">
+                            <i data-lucide="scale" style="width:13px;height:13px;color:var(--gold);"></i>
+                            Ilmu Faraidh
+                        </span>
+                    </div>
+
+                    <h3 class="book-item-title">
+                        <span>Hukum Waris & Faraidh Praktis</span>
+                    </h3>
+
+                    <div class="book-author">
+                        <i data-lucide="shield-check" style="width:14px;height:14px;"></i>
+                        <span>Kowpi.id Sharia Team</span>
+                    </div>
+
+                    <p class="book-desc">
+                        Langkah demi langkah menghitung pembagian harta waris secara syar'i, memahami bagian ashhabul furudh, dan mencegah keretakan silaturahmi antar ahli waris.
+                    </p>
+
+                    <div class="card-cta-area">
+                        <div class="btn-book-action btn-upcoming-action">
+                            <i data-lucide="lock" style="width:15px;height:15px;"></i>
+                            <span>Nantikan Rilis (Coming Soon)</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- EBOOK 3: WASIAT & HIBAH (COMING SOON) -->
+            <article class="book-card-item" data-categories="wasiat hibah">
+                <div class="book-mockup-stage" title="Segera Terbit: Fikih Wasiat & Hibah">
+                    <div class="status-ribbon ribbon-upcoming">
+                        <i data-lucide="clock" style="width:12px;height:12px;display:inline-block;vertical-align:-1px;margin-right:2px;"></i>
+                        Segera Terbit
+                    </div>
+
+                    <!-- 3D Book Mockup -->
+                    <div class="book-3d">
+                        <div class="book-spine"></div>
+                        <div class="book-pages-edge"></div>
+                        <div class="book-cover-front">
+                            <img src="img/cover-wasiat.jpg" alt="Cover Fikih Wasiat & Hibah">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="book-card-body">
+                    <div class="book-meta">
+                        <span class="book-meta-item">
+                            <i data-lucide="calendar" style="width:13px;height:13px;color:var(--gold);"></i>
+                            Rilis Q1 2027
+                        </span>
+                        <span>•</span>
+                        <span class="book-meta-item">
+                            <i data-lucide="file-check" style="width:13px;height:13px;color:var(--gold);"></i>
+                            Muamalah Keluarga
+                        </span>
+                    </div>
+
+                    <h3 class="book-item-title">
+                        <span>Fikih Wasiat & Hibah Keluarga</span>
+                    </h3>
+
+                    <div class="book-author">
+                        <i data-lucide="award" style="width:14px;height:14px;"></i>
+                        <span>Kowpi.id Litbang</span>
+                    </div>
+
+                    <p class="book-desc">
+                        Aturan syariat hibah selagi hidup, batasan maksimal wasiat 1/3 harta, dan strategi perlindungan aset keluarga agar adil dan berberkah tanpa sengketa.
+                    </p>
+
+                    <div class="card-cta-area">
+                        <div class="btn-book-action btn-upcoming-action">
+                            <i data-lucide="lock" style="width:15px;height:15px;"></i>
+                            <span>Nantikan Rilis (Coming Soon)</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <!-- Empty state jika search tidak ditemukan -->
+        <div id="noResults" style="display:none; text-align:center; padding:60px 20px;">
+            <i data-lucide="search-x" style="width:48px;height:48px;color:var(--gold);margin-bottom:16px;"></i>
+            <h3 style="color:#fff; font-size:1.3rem; margin-bottom:8px;">Ebook Tidak Ditemukan</h3>
+            <p style="color:var(--text-secondary); font-size:0.95rem;">Coba gunakan kata kunci lain atau pilih kategori "Semua Ebook".</p>
+        </div>
+    </div>
+</section>
+
+<!-- VALUES / KEUNGGULAN SECTION -->
+<section class="values-section">
+    <div class="container">
+        <div style="text-align:center; max-width:650px; margin:0 auto 48px;">
+            <div class="hero-eyebrow" style="margin-bottom:16px;">
+                <i data-lucide="shield" style="width:14px;height:14px;"></i>
+                <span>Standar Mutu Literasi</span>
+            </div>
+            <h2 style="font-family:'Playfair Display', serif; font-size:2rem; color:#fff; font-weight:700;">
+                Mengapa Membaca Ebook dari Kowpi.id?
+            </h2>
+        </div>
+
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon-box">
+                    <i data-lucide="book-marked" style="width:26px;height:26px;"></i>
+                </div>
+                <h3>Sesuai Fikih & Dalil Shahih</h3>
+                <p>Setiap panduan disusun dengan merujuk langsung pada Al-Qur'an, As-Sunnah, serta pendapat para ulama mu'tabar dalam fikih muamalah dan faraidh.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon-box">
+                    <i data-lucide="briefcase" style="width:26px;height:26px;"></i>
+                </div>
+                <h3>Disusun Pakar Bersertifikasi</h3>
+                <p>Ditulis oleh praktisi hukum, perencana keuangan syariah bersertifikasi (CFP), dan asatidzah yang berpengalaman mendampingi sengketa waris.</p>
+            </div>
+
+            <div class="value-card">
+                <div class="value-icon-box">
+                    <i data-lucide="gift" style="width:26px;height:26px;"></i>
+                </div>
+                <h3>100% Gratis Tanpa Syarat</h3>
+                <p>Ebook dibagikan sebagai bentuk dakwah dan edukasi umat. Siapapun dapat mengunduh dan menyebarkannya untuk kemaslahatan bersama.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- COMMUNITY BANNER -->
+<section class="community-banner">
+    <div class="container">
+        <div class="community-box">
+            <h2 class="community-title">Punya Pertanyaan Seputar Fikih Harta & Waris?</h2>
+            <p class="community-subtitle">
+                Bergabunglah bersama ribuan keluarga muslim lainnya di Komunitas Waris Planning Indonesia (KOWPI) atau konsultasikan persoalan waris keluarga Anda langsung kepada tim ahli.
+            </p>
+            <a href="https://wa.me/628980155558?text=Halo%20Admin%20Kowpi,%20saya%20tertarik%20dengan%20katalog%20ebook%20dan%20ingin%20konsultasi%20seputar%20waris." target="_blank" class="btn-community-wa">
+                <i data-lucide="message-circle" style="width:20px;height:20px;"></i>
+                <span>Hubungi Kami via WhatsApp</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <a href="https://kowpi.id" target="_blank" class="footer-logo">
+                <img src="img/logo-kowpi.png" alt="Kowpi.id">
+            </a>
+            <div style="color:var(--text-muted); font-size:0.85rem;">
+                &copy; 2026 Kowpi.id (Komunitas Waris Planning Indonesia). Seluruh Hak Cipta Dilindungi.
+            </div>
+        </div>
+        <p class="footer-disclaimer">
+            Disclaimer: Seluruh ebook yang diterbitkan di portal ini bertujuan untuk edukasi dan dakwah fikih syariah. Konsultasikan rincian kasus pembagian waris atau sengketa khusus kepada pengadilan agama atau konsultan waris bersertifikat.
+        </p>
+    </div>
+</footer>
+
+<!-- SMART LOCALHOST REDIRECT HELPER -->
+<script>
+    // If testing on localhost and LP-yatim exists, point links to localhost LP-yatim
+    if (window.location.hostname === 'localhost' && !window.location.pathname.includes('ebook.kowpi.id')) {
+        document.querySelectorAll('[data-local-href]').forEach(el => {
+            const localHref = el.getAttribute('data-local-href');
+            if (localHref) {
+                el.setAttribute('href', localHref);
+                if (el.hasAttribute('data-href')) {
+                    el.setAttribute('data-href', localHref);
+                }
+            }
+        });
+    }
+</script>
+
+<!-- Custom JS -->
+<script src="js/catalog.js"></script>
+
+<!-- FLOATING DEMO NAVIGATION SWITCHER -->
+<style>
+.demo-suite-bar {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  background: rgba(15, 23, 42, 0.94);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(14, 165, 233, 0.35);
+  border-radius: 50px;
+  padding: 6px 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 12px 35px rgba(0,0,0,0.5), 0 0 25px rgba(14,165,233,0.25);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  transition: all 0.3s ease;
+  max-width: 96vw;
+  overflow-x: auto;
+}
+.demo-suite-bar::-webkit-scrollbar { display: none; }
+.demo-suite-bar:hover {
+  border-color: rgba(14, 165, 233, 0.6);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 35px rgba(14,165,233,0.35);
+}
+.demo-suite-bar .suite-brand {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-right: 2px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding-right: 10px;
+  border-right: 1px solid rgba(255,255,255,0.15);
+  white-space: nowrap;
+}
+.demo-suite-bar a.demo-pill {
+  padding: 6px 13px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: rgba(255,255,255,0.85);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+.demo-suite-bar a.demo-pill:hover {
+  color: #ffffff;
+  background: rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+}
+.demo-suite-bar a.demo-pill.active {
+  background: linear-gradient(135deg, #0284c7, #0ea5e9);
+  color: #ffffff !important;
+  box-shadow: 0 3px 12px rgba(14, 165, 233, 0.45);
+}
+.demo-suite-bar .career-link {
+  color: #34d399;
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-decoration: none;
+  padding-left: 10px;
+  border-left: 1px solid rgba(255,255,255,0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+.demo-suite-bar .career-link:hover {
+  color: #a7f3d0;
+  transform: translateY(-1px);
+}
+@media (max-width: 768px) {
+  .demo-suite-bar {
+    bottom: 12px;
+    padding: 5px 8px;
+    gap: 3px;
+  }
+  .demo-suite-bar .suite-brand { display: none; }
+  .demo-suite-bar a.demo-pill { font-size: 0.7rem; padding: 5px 8px; }
+}
+</style>
+<div class="demo-suite-bar">
+  <div class="suite-brand">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+    <span>PORTFOLIO</span>
+  </div>
+  <a href="../index.html" class="demo-pill ">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>Data Santri</span>
+  </a>
+  <a href="../dataguru.html" class="demo-pill ">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+    <span>Data Guru</span>
+  </a>
+  <a href="../pmb.html" class="demo-pill ">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+    <span>Portal PMB</span>
+  </a>
+  <a href="../webinar/index.html" class="demo-pill ">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+    <span>Webinar KOWPI</span>
+  </a>
+  <a href="../ebook/index.html" class="demo-pill active">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+    <span>Ebook KOWPI</span>
+  </a>
+  <a href="../portfolio.html" class="career-link ">
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+    <span>CV &amp; Kit</span>
+  </a>
+</div>
+</body>
+</html>

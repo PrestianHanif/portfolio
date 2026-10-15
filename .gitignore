@@ -1,3 +1,5 @@
+*.zip
 *.ps1
+*.js
 dump_*.html
 
