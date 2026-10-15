@@ -6,7 +6,7 @@
 [![Framework](https://img.shields.io/badge/Framework-CodeIgniter%203%20MVC-EF4223?logo=codeigniter&logoColor=white)](https://codeigniter.com/)
 [![Database](https://img.shields.io/badge/Database-MySQL-4479A1?logo=mysql&logoColor=white)](https://www.mysql.com/)
 [![Frontend](https://img.shields.io/badge/Frontend-Bootstrap%204%20%7C%20DataTables%20%7C%20AdminLTE-563D7C?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
-[![Live Showcase](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?logo=github)](https://prestianhanif.github.io/mips-academic-suite)
+[![Live Showcase](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?logo=github)](https://prestianhanif.github.io/portfolio)
 
 ---
 

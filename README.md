@@ -2,7 +2,7 @@
 > **End-to-End Educational Management Platform (Web-Based)**  
 > *Developed for PKBM Madina Islamic Premier School (MIPS) by Prestian Hanif*
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?logo=github)](https://prestianhanif.github.io/mips-academic-suite)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-GitHub%20Pages-success?logo=github)](https://prestianhanif.github.io/portfolio)
 [![Tech Stack](https://img.shields.io/badge/Tech%20Stack-PHP%20%7C%20CodeIgniter%20%7C%20MySQL%20%7C%20Bootstrap-blue)](https://github.com/PrestianHanif)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-0A66C2?logo=linkedin)](https://linkedin.com)
 
@@ -21,7 +21,7 @@
 ## 🚀 Live Interactive Demo on GitHub Pages
 
 Kunjungi live demo interaktif di:  
-👉 **[https://prestianhanif.github.io/mips-academic-suite](https://prestianhanif.github.io/mips-academic-suite)**
+👉 **[https://prestianhanif.github.io/portfolio](https://prestianhanif.github.io/portfolio)**
 
 Tidak perlu instalasi XAMPP atau database MySQL lokal — recruiter dan tim teknis dapat langsung mencoba fitur filter, navigasi, dan simulasi formulir pendaftaran secara langsung dari browser!
 
